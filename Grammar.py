@@ -74,3 +74,5 @@ class Grammar:
         print("The grammar is a valid Context-Free Grammar (CFG).")
         return True
 
+    def get_productions_for_nonTerminal(self, nonTerminal):
+        return self.productions.get(nonTerminal, []);

@@ -1,3 +1,4 @@
+from Configuration import Configuration
 from Grammar import Grammar
 from RecursiveDescendentParser import RecursiveDescentParser
 
@@ -7,8 +8,6 @@ def main():
 
     file_path = 'g1.in'
     grammar.read_grammar_from_file(file_path)
-
-    recDesc= RecursiveDescentParser(grammar)
 
     while True:
         print("\n--- Grammar Operations Menu ---")
@@ -34,9 +33,8 @@ def main():
         elif choice == '5':
             print("Is the grammar a CFG?", grammar.is_CFG())
         elif choice == '6':
-            #grammar.solve_left_recursivity()
-            # print(grammar.productions)
-            print("Parse using recursive descend: ", recDesc.parse("id + id"))
+           input_string = input("Enter the input string: ")
+
         elif choice == '7':
             print("Exiting the program.")
             break

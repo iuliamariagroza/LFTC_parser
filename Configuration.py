@@ -1,5 +1,9 @@
 class Configuration:
     def __init__(self,move,state_of_parsing, position_current_symbol,working_stack, input_stack):
+        if working_stack is None:
+            working_stack = []
+        if input_stack is None:
+            input_stack = []
         self.move = move
         self.state_of_parsing = state_of_parsing
         self.position_current_symbol = position_current_symbol
@@ -37,7 +41,6 @@ class Configuration:
         self.input_stack = input_stack
 
     def print_input_stack(self):
-        # Convert deque to reversed list
         reversed_stack = list(reversed(self.input_stack))
         return "[" + ", ".join(reversed_stack) + "]"
 
