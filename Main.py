@@ -22,9 +22,9 @@ def main():
         choice = input("Enter your choice (1-6): ")
 
         if choice == '1':
-            grammar.print_nonTerminals()
+            print("Non-terminals:",grammar.nonTerminals_list())
         elif choice == '2':
-            grammar.print_terminals()
+            print("Terminals:",grammar.terminals_list())
         elif choice == '3':
             grammar.print_productions()
         elif choice == '4':
