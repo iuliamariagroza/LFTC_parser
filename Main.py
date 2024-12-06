@@ -7,6 +7,7 @@ def main():
 
     file_path = 'g1.in'
     grammar.read_grammar_from_file(file_path)
+    parser = RecursiveDescentParser(grammar,out_file="out1.txt", in_file="seq.txt")
 
     while True:
         print("\n--- Grammar Operations Menu ---")
@@ -32,7 +33,10 @@ def main():
         elif choice == '5':
             print("Is the grammar a CFG?", grammar.is_CFG())
         elif choice == '6':
-           input_string = input("Enter the input string: ")
+            parser.parsing_strategy('')
+            # if parser.getState() == 'f':
+            #     output = PrintParser(parser.getTree())
+            #     output.printToFile('tree.txt')
 
         elif choice == '7':
             print("Exiting the program.")
