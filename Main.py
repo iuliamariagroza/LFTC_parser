@@ -1,4 +1,3 @@
-from Configuration import Configuration
 from Grammar import Grammar
 from RecursiveDescendentParser import RecursiveDescentParser
 
